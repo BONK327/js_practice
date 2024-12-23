@@ -1,28 +1,24 @@
-let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?')
-console.log(numberOfFilms);
+let age = +prompt('А лет то тебе сколько?')
 
-if (numberOfFilms == null) {
-    console.log('Вы не ответели на вопрос ;(');
-} else {
-    let n = numberOfFilms * 4;
-    console.log(n);
+// if (age < 18) {
+//     console.log("Подрасти немного");
+// } else if (age >= 18 && age < 20) {
+//     console.log('Входить можно, но с пропуском');
+// } else {
+//     console.log('Проходите, сэр!');
+// }
+//
+// const open = age < 18 ? 'Подрасти немного' : age >= 18 && age < 20 ? 'Входить можно, но только с пропуском' : 'Проходите, сэр!'
+// console.log(open)
+
+switch (age) {
+    case 18:
+        console.log('Подрасти немного');
+        break;
+    case 19:
+        console.log("Проходи");
+        break;
+    default:
+        console.log('Ладно');
+
 }
-
-
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genders: [],
-    privat: false
-}
-
-let a = prompt('Один из последних просмотренных фильмов?'),
-    b = prompt('На сколько вы бы оценили его?'),
-    c = prompt('Один из последних просмотренных фильмов?'),
-    d = prompt('На сколько вы бы оценили его?');
-
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-
-console.log(personalMovieDB)
